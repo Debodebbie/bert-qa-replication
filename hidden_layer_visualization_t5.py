@@ -1,17 +1,17 @@
 import torch
 import transformers
 
-from transformers import BertForQuestionAnswering as Model
+#from transformers import BertForQuestionAnswering as Model
 #from transformers import RobertaForQuestionAnswering as Model
 #from transformers import DistilBertForQuestionAnswering as Model
 #from transformers import BertTokenizer as Model
-#from transformers import T5ForConditionalGeneration as Model
+from transformers import T5ForConditionalGeneration as Model
 from transformers import T5Config
 
-from transformers import BertTokenizer as Tokenizer
+#from transformers import BertTokenizer as Tokenizer
 #from transformers import RobertaTokenizer as Tokenizer
 #from transformers import DistilBertTokenizer as Tokenizer
-#from transformers import T5Tokenizer as Tokenizer
+from transformers import T5Tokenizer as Tokenizer
 
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
@@ -28,13 +28,13 @@ def run(model_name, question, context, sup_facts):
 #                                output_hidden_states=True,
 #                                return_dict=True)
 
-#    t5_config = T5Config.from_pretrained(model_name)
-    model = Model.from_pretrained(model_name)#, config=t5_config)
-
-    # Input text
-    #text = 'India is a <extra_id_0> of the world. </s>'
-
-    text_input = "question: " + question + " context: " + context # + " </s>"
+    t5_config = T5Config.from_pretrained(model_name)
+    t5_config.output_hidden_states = True
+    t5_config.return_dict = True
+    print(t5_config.output_hidden_states)
+    print(t5_config.return_dict)
+    model = Model.from_pretrained(model_name, config = t5_config)
+    text_input = "question: " + question + " context: " + context #+ "\s"
     #encoded = tokenizer.encode_plus(text_input, add_special_tokens=True, return_tensors='pt')
     #input_ids = encoded['input_ids']
 
@@ -43,42 +43,54 @@ def run(model_name, question, context, sup_facts):
                               #num_beams=200, num_return_sequences=20,
                               #max_length=5,
 #                            output_hidden_states=True, return_dict=True)
-
+    #input_ids = tokenizer.encode(question, context)
     input_ids = tokenizer(text_input, return_tensors="pt").input_ids
-    output = model(input_ids, output_hidden_states=True, return_dict=True)
+    #output = model.generate(input_ids, output_hidden_states = True)
+    #decoder_input_ids = tokenizer("Studies show that", return_tensors="pt").input_ids  # Batch size 1
+    #output = model.forward(input_ids = input_ids, decoder_input_ids=decoder_input_ids, output_hidden_states = True, return_dict = True)
 
-    #print(encoded.shape)
-    #print(input_ids.shape)
-    #print(output.shape)
-    #print(output)
+    input_text = "question: %s  context: %s " % (question, context) #</s>
+    features = tokenizer(input_text, return_tensors='pt')
+    decoder_input_ids = tokenizer(input_text, return_tensors="pt").input_ids
+    output = model.forward(input_ids=features['input_ids'], decoder_input_ids=decoder_input_ids,
+                         attention_mask=features['attention_mask'], output_hidden_states = True)
+    tokens = tokenizer.convert_ids_to_tokens(tokenizer.encode(input_text))
+
+
+    #print(output[0][0][0])
+    #print(output[0][0][0].detach().numpy())
+    #print(tokenizer.decode(output[0][0][0].detach().numpy()))
+
     #print(tokenizer.decode(output[0]))
-    print(output.hidden_states)
-    '''
-    input_ids = tokenizer.encode(question, context)
+    #print(tokenizer.decode(output.hidden_states))
+    #print(output.decoder_hidden_states)
+    #print(tokenizer.decode(output[0]))
+
+    #input_ids = tokenizer.encode(question, context)
 
     #Different approach for T5
-   # 
+    # 
     #input_ids = tokenizer.encode(text_input)
 
-    tokens = tokenizer.convert_ids_to_tokens(input_ids)
-    sep_index = input_ids.index(tokenizer.sep_token_id)
+    #tokens = tokenizer.convert_ids_to_tokens(input_ids)
+    #sep_index = input_ids.index(tokenizer.sep_token_id)
 
-    sup_ids = tokenizer.encode(sup_facts)
-    sup_tokens = tokenizer.convert_ids_to_tokens(sup_ids)
+    #sup_ids = tokenizer.encode(sup_facts)
+    #sup_tokens = tokenizer.convert_ids_to_tokens(sup_ids)
     # sup_start_id, sup_end_if = get_sup_ids(tokens, sup_tokens)
 
     # Segment A is the question, segment B is the answer?
     # The number of segment A tokens includes the [SEP] token istelf.
-    num_seg_a = sep_index + 1
+    #num_seg_a = sep_index + 1
 
     # The remainder are segment B.
-    num_seg_b = len(input_ids) - num_seg_a
+    #num_seg_b = len(input_ids) - num_seg_a
 
     # Construct the list of 0s and 1s.
-    segment_ids = [0] * num_seg_a + [1] * num_seg_b
+    #segment_ids = [0] * num_seg_a + [1] * num_seg_b
 
     # There should be a segment_id for every input token.
-    assert len(segment_ids) == len(input_ids)
+    #assert len(segment_ids) == len(input_ids)
 
     # Output is a tuple with torch tensors
 
@@ -86,17 +98,20 @@ def run(model_name, question, context, sup_facts):
     #print(model.config)
     #"vocab_size": 50265 for csarron/roberta-base-squad-v1
     #"vocab_size": 30522 for csarron/bert-base-uncased-squad-v1
-    output = model(torch.tensor([input_ids]), token_type_ids=torch.tensor([segment_ids]))
-    '''
-    start_scores = output.start_logits
-    end_scores = output.end_logits
+    #output = model(torch.tensor([input_ids]), token_type_ids=torch.tensor([segment_ids]))
+    
+    #start_scores = output.start_logits
+    #end_scores = output.end_logits
 
-    answer_start = torch.argmax(start_scores)
-    answer_end = torch.argmax(end_scores)
+    #answer_start = torch.argmax(start_scores)
+    #answer_end = torch.argmax(end_scores)
     #answer = ' '.join(tokens[answer_start:answer_end + 1])
     #print(answer)
+    #'''
+    answer = "answer"
+    sep_index = 0
 
-    hidden_states = output.hidden_states
+    hidden_states = output.encoder_hidden_states
 
     for i, layer in enumerate(hidden_states):
         # Token embedding of one of the 118 tokens in the question text
@@ -208,10 +223,10 @@ if __name__ == '__main__':
     hotpot_answer = "1999"
     '''
     #model_name = 'bert-large-uncased-whole-word-masking-finetuned-weights'
-    model_name = 'csarron/bert-base-uncased-squad-v1'
+    #model_name = 'csarron/bert-base-uncased-squad-v1'
     #model_name = 'csarron/roberta-base-squad-v1'
     #model_name = "roberta-base"
     #model_name = "distilbert-base-uncased-distilled-squad"
     #model_name = 'ramsrigouthamg/t5_squad_v1'
-    #model_name = 'valhalla/t5-base-qa-qg-hl'
+    model_name = 'valhalla/t5-base-qa-qg-hl'
     run(model_name, squad_question, squad_context, supporting_facts)

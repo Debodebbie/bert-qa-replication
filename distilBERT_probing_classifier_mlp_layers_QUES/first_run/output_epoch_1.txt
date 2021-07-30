@@ -1,0 +1,35 @@
+C:\DEV_Tools\python\python.exe C:/Users/Prophet.DESKTOP-UUFA83J/PycharmProjects/bert-qa-replication/probing_task_v3_destilBERT.py
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+load model
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+model loaded
+prepare_dataset
+5452
+500
+load classifier from +  "./probing_classifier_mlp_layers/nn_model_epoch", training epoch 1
+evaluation started
+[   24] loss:, [3.59, 3.677, 3.619, 3.583, 3.32, 3.552, 3.808]
+[   49] loss:, [3.566, 3.581, 3.566, 3.51, 3.286, 3.522, 3.773]
+[   74] loss:, [3.543, 3.562, 3.535, 3.497, 3.228, 3.524, 3.745]
+[   99] loss:, [3.506, 3.554, 3.509, 3.46, 3.224, 3.486, 3.725]
+[  124] loss:, [3.511, 3.572, 3.518, 3.455, 3.238, 3.471, 3.702]
+[  149] loss:, [3.516, 3.558, 3.491, 3.446, 3.242, 3.461, 3.707]
+[  174] loss:, [3.502, 3.553, 3.483, 3.427, 3.222, 3.453, 3.7]
+[  199] loss:, [3.516, 3.56, 3.482, 3.433, 3.238, 3.468, 3.705]
+[  224] loss:, [3.518, 3.557, 3.485, 3.437, 3.236, 3.475, 3.713]
+[  249] loss:, [3.496, 3.53, 3.464, 3.421, 3.219, 3.473, 3.719]
+[  274] loss:, [3.502, 3.53, 3.465, 3.426, 3.231, 3.471, 3.717]
+[  299] loss:, [3.505, 3.529, 3.459, 3.428, 3.237, 3.472, 3.728]
+[  324] loss:, [3.492, 3.526, 3.454, 3.41, 3.219, 3.464, 3.713]
+[  349] loss:, [3.499, 3.535, 3.461, 3.417, 3.22, 3.469, 3.715]
+[  374] loss:, [3.51, 3.543, 3.465, 3.427, 3.232, 3.476, 3.724]
+[  399] loss:, [3.504, 3.534, 3.453, 3.417, 3.226, 3.464, 3.72]
+[  424] loss:, [3.505, 3.536, 3.452, 3.416, 3.224, 3.461, 3.716]
+[  449] loss:, [3.503, 3.531, 3.446, 3.413, 3.216, 3.458, 3.712]
+[  474] loss:, [3.505, 3.533, 3.45, 3.416, 3.221, 3.461, 3.718]
+[  499] loss:, [3.512, 3.537, 3.457, 3.423, 3.229, 3.465, 3.721]
+training finished
+
+Process finished with exit code 0

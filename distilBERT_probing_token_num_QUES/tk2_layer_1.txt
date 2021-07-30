@@ -1,0 +1,35 @@
+C:\DEV_Tools\python\python.exe C:/Users/Prophet.DESKTOP-UUFA83J/PycharmProjects/bert-qa-replication/probing_task_v3_destilBERT.py
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+load model
+model loaded
+prepare_dataset
+5452
+500
+load classifier from +  "./probing_token_num/nn_model_epoch", training epoch 1
+evaluation started
+[   24] loss:, [3.45, 3.403, 3.262, 3.291, 3.176, 3.26, 3.247]
+[   49] loss:, [3.375, 3.318, 3.282, 3.237, 3.132, 3.197, 3.213]
+[   74] loss:, [3.362, 3.286, 3.239, 3.173, 3.088, 3.137, 3.15]
+[   99] loss:, [3.347, 3.28, 3.226, 3.173, 3.088, 3.149, 3.139]
+[  124] loss:, [3.366, 3.3, 3.256, 3.186, 3.101, 3.163, 3.16]
+[  149] loss:, [3.373, 3.306, 3.26, 3.195, 3.082, 3.152, 3.149]
+[  174] loss:, [3.358, 3.286, 3.228, 3.167, 3.064, 3.132, 3.128]
+[  199] loss:, [3.368, 3.302, 3.238, 3.181, 3.061, 3.136, 3.135]
+[  224] loss:, [3.379, 3.303, 3.242, 3.182, 3.064, 3.137, 3.137]
+[  249] loss:, [3.369, 3.29, 3.227, 3.173, 3.056, 3.121, 3.123]
+[  274] loss:, [3.365, 3.299, 3.237, 3.175, 3.062, 3.122, 3.125]
+[  299] loss:, [3.371, 3.304, 3.241, 3.168, 3.052, 3.118, 3.12]
+[  324] loss:, [3.367, 3.292, 3.227, 3.15, 3.042, 3.107, 3.109]
+[  349] loss:, [3.38, 3.298, 3.234, 3.15, 3.043, 3.104, 3.114]
+[  374] loss:, [3.397, 3.317, 3.253, 3.164, 3.056, 3.119, 3.127]
+[  399] loss:, [3.387, 3.308, 3.249, 3.159, 3.055, 3.115, 3.123]
+[  424] loss:, [3.383, 3.308, 3.246, 3.159, 3.052, 3.112, 3.12]
+[  449] loss:, [3.381, 3.296, 3.244, 3.152, 3.048, 3.104, 3.116]
+[  474] loss:, [3.386, 3.3, 3.25, 3.15, 3.048, 3.105, 3.117]
+[  499] loss:, [3.394, 3.31, 3.257, 3.158, 3.052, 3.112, 3.125]
+training finished
+
+Process finished with exit code 0

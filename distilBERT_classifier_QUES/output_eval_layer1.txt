@@ -1,0 +1,34 @@
+C:\DEV_Tools\python\python.exe C:/Users/Prophet.DESKTOP-UUFA83J/PycharmProjects/bert-qa-replication/probing_task_v3.py
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+load model
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+model loaded
+prepare_dataset
+500
+load model
+evaluation started
+[   24] loss:, [3.598, 3.508, 3.427, 3.349, 3.188, 3.273, 3.305]
+[   49] loss:, [3.573, 3.459, 3.398, 3.293, 3.173, 3.227, 3.325]
+[   74] loss:, [3.552, 3.411, 3.346, 3.236, 3.132, 3.193, 3.278]
+[   99] loss:, [3.512, 3.392, 3.327, 3.229, 3.133, 3.183, 3.261]
+[  124] loss:, [3.518, 3.402, 3.341, 3.24, 3.144, 3.189, 3.266]
+[  149] loss:, [3.523, 3.41, 3.352, 3.242, 3.138, 3.184, 3.256]
+[  174] loss:, [3.508, 3.39, 3.325, 3.216, 3.12, 3.163, 3.251]
+[  199] loss:, [3.522, 3.401, 3.337, 3.227, 3.116, 3.168, 3.27]
+[  224] loss:, [3.524, 3.404, 3.338, 3.229, 3.124, 3.167, 3.276]
+[  249] loss:, [3.503, 3.386, 3.321, 3.22, 3.116, 3.151, 3.279]
+[  274] loss:, [3.509, 3.389, 3.324, 3.216, 3.118, 3.151, 3.271]
+[  299] loss:, [3.512, 3.39, 3.324, 3.213, 3.114, 3.147, 3.271]
+[  324] loss:, [3.498, 3.373, 3.307, 3.196, 3.102, 3.135, 3.269]
+[  349] loss:, [3.505, 3.38, 3.313, 3.198, 3.108, 3.137, 3.269]
+[  374] loss:, [3.516, 3.393, 3.326, 3.212, 3.123, 3.154, 3.279]
+[  399] loss:, [3.51, 3.387, 3.32, 3.206, 3.12, 3.147, 3.273]
+[  424] loss:, [3.511, 3.386, 3.319, 3.207, 3.117, 3.143, 3.271]
+[  449] loss:, [3.509, 3.385, 3.317, 3.202, 3.113, 3.138, 3.269]
+[  474] loss:, [3.511, 3.388, 3.318, 3.202, 3.116, 3.143, 3.273]
+[  499] loss:, [3.518, 3.396, 3.326, 3.209, 3.119, 3.151, 3.277]
+training finished
+
+Process finished with exit code 0

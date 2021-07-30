@@ -1,0 +1,35 @@
+C:\DEV_Tools\python\python.exe C:/Users/Prophet.DESKTOP-UUFA83J/PycharmProjects/bert-qa-replication/probing_task_v3_destilBERT.py
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+load model
+model loaded
+prepare_dataset
+5452
+500
+load classifier from +  "./probing_classifier_mlp_layers/nn_model_epoch", training epoch 2
+evaluation started
+[   24] loss:, [3.588, 3.599, 3.621, 3.582, 3.311, 3.529, 3.841]
+[   49] loss:, [3.564, 3.546, 3.594, 3.495, 3.284, 3.502, 3.787]
+[   74] loss:, [3.541, 3.528, 3.558, 3.475, 3.214, 3.503, 3.754]
+[   99] loss:, [3.504, 3.489, 3.538, 3.448, 3.209, 3.475, 3.738]
+[  124] loss:, [3.509, 3.499, 3.541, 3.436, 3.219, 3.466, 3.723]
+[  149] loss:, [3.514, 3.498, 3.526, 3.431, 3.227, 3.453, 3.724]
+[  174] loss:, [3.5, 3.48, 3.518, 3.408, 3.21, 3.444, 3.714]
+[  199] loss:, [3.514, 3.492, 3.523, 3.412, 3.228, 3.457, 3.716]
+[  224] loss:, [3.516, 3.492, 3.523, 3.416, 3.229, 3.463, 3.723]
+[  249] loss:, [3.494, 3.472, 3.499, 3.399, 3.214, 3.46, 3.731]
+[  274] loss:, [3.5, 3.482, 3.498, 3.402, 3.223, 3.458, 3.727]
+[  299] loss:, [3.503, 3.486, 3.497, 3.403, 3.228, 3.459, 3.737]
+[  324] loss:, [3.49, 3.471, 3.496, 3.384, 3.214, 3.451, 3.722]
+[  349] loss:, [3.496, 3.479, 3.503, 3.391, 3.212, 3.456, 3.723]
+[  374] loss:, [3.507, 3.491, 3.51, 3.403, 3.223, 3.465, 3.731]
+[  399] loss:, [3.502, 3.483, 3.501, 3.393, 3.218, 3.453, 3.726]
+[  424] loss:, [3.503, 3.484, 3.502, 3.39, 3.217, 3.45, 3.721]
+[  449] loss:, [3.501, 3.48, 3.499, 3.386, 3.207, 3.446, 3.717]
+[  474] loss:, [3.503, 3.481, 3.5, 3.39, 3.211, 3.452, 3.722]
+[  499] loss:, [3.51, 3.488, 3.509, 3.397, 3.22, 3.455, 3.726]
+training finished
+
+Process finished with exit code 0

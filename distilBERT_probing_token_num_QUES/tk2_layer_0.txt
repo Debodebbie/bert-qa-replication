@@ -1,0 +1,35 @@
+C:\DEV_Tools\python\python.exe C:/Users/Prophet.DESKTOP-UUFA83J/PycharmProjects/bert-qa-replication/probing_task_v3_destilBERT.py
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+load model
+Using custom data configuration default
+Reusing dataset trec (C:\Users\Prophet.DESKTOP-UUFA83J\.cache\huggingface\datasets\trec\default\1.1.0\751da1ab101b8d297a3d6e9c79ee9b0173ff94c4497b75677b59b61d5467a9b9)
+model loaded
+prepare_dataset
+5452
+500
+load classifier from training epoch 0"./probing_token_num/nn_model_epoch"
+evaluation started
+[   24] loss:, [3.414, 3.446, 3.299, 3.284, 3.189, 3.303, 3.3]
+[   49] loss:, [3.353, 3.355, 3.31, 3.231, 3.147, 3.237, 3.258]
+[   74] loss:, [3.341, 3.351, 3.286, 3.191, 3.104, 3.165, 3.191]
+[   99] loss:, [3.333, 3.333, 3.262, 3.178, 3.112, 3.169, 3.177]
+[  124] loss:, [3.351, 3.351, 3.276, 3.203, 3.113, 3.181, 3.199]
+[  149] loss:, [3.358, 3.356, 3.283, 3.211, 3.1, 3.178, 3.197]
+[  174] loss:, [3.344, 3.327, 3.257, 3.18, 3.087, 3.155, 3.176]
+[  199] loss:, [3.354, 3.344, 3.265, 3.196, 3.081, 3.159, 3.189]
+[  224] loss:, [3.364, 3.343, 3.265, 3.197, 3.084, 3.159, 3.189]
+[  249] loss:, [3.353, 3.331, 3.245, 3.183, 3.077, 3.143, 3.176]
+[  274] loss:, [3.35, 3.338, 3.253, 3.185, 3.084, 3.144, 3.182]
+[  299] loss:, [3.356, 3.344, 3.255, 3.186, 3.078, 3.139, 3.18]
+[  324] loss:, [3.351, 3.334, 3.24, 3.17, 3.067, 3.128, 3.166]
+[  349] loss:, [3.363, 3.341, 3.246, 3.173, 3.07, 3.124, 3.168]
+[  374] loss:, [3.38, 3.359, 3.263, 3.19, 3.084, 3.14, 3.181]
+[  399] loss:, [3.37, 3.349, 3.256, 3.183, 3.082, 3.136, 3.176]
+[  424] loss:, [3.366, 3.351, 3.254, 3.183, 3.079, 3.133, 3.176]
+[  449] loss:, [3.365, 3.34, 3.25, 3.178, 3.073, 3.128, 3.171]
+[  474] loss:, [3.369, 3.342, 3.257, 3.181, 3.075, 3.129, 3.174]
+[  499] loss:, [3.378, 3.352, 3.263, 3.19, 3.077, 3.138, 3.184]
+training finished
+
+Process finished with exit code 0
